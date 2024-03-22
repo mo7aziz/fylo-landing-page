@@ -1,7 +1,7 @@
-
 :root {
   --clr-primary-1: hsl(243, 87%, 12%);
   --clr-primary-2: hsl(238, 22%, 44%);
+  --clr-primary-3: hsl(224, 100%, 55%);
 
   --clr-accent-1: hsl(224, 93%, 58%);
   --clr-accent-2: hsl(170, 45%, 43%);
@@ -10,7 +10,7 @@
   --clr-neutral-2: hsl(0, 0%, 75%);
 
   --fs-body: 16px;
-  --fs-heading: 24px;
+  --fs-heading: 32px;
 
   --fw-bold: 700;
   --fw-normal: 400;
@@ -102,6 +102,20 @@ li {
   list-style: none;
 }
 
+h1 {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-heading);
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-1);
+}
+
+p {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fs-body);
+  color: var(--clr-primary-2);
+}
+
 .container {
   padding-inline: 15px;
   margin-inline: auto;
@@ -109,25 +123,23 @@ li {
 
 @media (min-width: 768px) {
   .container {
-      width: 750px;
+    width: 750px;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-      width: 970px;
+    width: 970px;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-      width: 1170px;
+    width: 1170px;
   }
 }
 
 /* Header */
-
-
 header .container {
   display: flex;
   align-items: center;
@@ -139,7 +151,7 @@ header .container {
   header img {
     width: 100px;
   }
-} 
+}
 
 header .links a {
   color: var(--clr-primary-1);
@@ -150,5 +162,81 @@ header .links a {
 header .links a:not(:last-child) {
   margin-right: 20px;
 }
+
 /* Header */
 
+/* main */
+
+main .container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 30px;
+}
+
+main .text,
+main img {
+  flex: 1 1 0;
+  width: 0;
+}
+
+
+main .text p {
+  margin-block: 10px;
+}
+
+main .text form {
+  display: flex;
+  gap: 10px;
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+}
+
+main .text form input[type='email'] {
+  padding: 10px 20px;
+  flex: 1;
+  border: 1px solid var(--clr-primary-1);
+  border-radius: 3px;
+}
+
+main .text form input[type='email']:focus {
+  outline: none;
+}
+
+main .text form input[type='email']::placeholder {
+  color: var(--clr-neutral-2);
+}
+
+main .text form input[type='submit'] {
+  color: var(--clr-neutral-1);
+  font-weight: var(--fw-bold);
+  padding: 10px 40px;
+  background-color: var(--clr-primary-3);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+main .text form input[type='submit']:hover,
+main .text form input[type='submit']:focus{
+  background-color: var(--clr-accent-1);
+}
+
+@media (max-width: 768px) {
+  main .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main .text,
+  main img {
+    width: 100%;
+    text-align: center;
+  }
+
+  main .text form {
+    flex-direction: column;
+  }
+}
+
+/* main */
