@@ -102,3 +102,53 @@ li {
   list-style: none;
 }
 
+.container {
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+      width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+      width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+      width: 1170px;
+  }
+}
+
+/* Header */
+
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 30px;
+}
+
+@media (max-width: 768px) {
+  header img {
+    width: 100px;
+  }
+} 
+
+header .links a {
+  color: var(--clr-primary-1);
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-normal);
+}
+
+header .links a:not(:last-child) {
+  margin-right: 20px;
+}
+/* Header */
+
