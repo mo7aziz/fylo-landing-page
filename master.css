@@ -234,6 +234,10 @@ main .text form input[type='submit']:focus{
     text-align: center;
   }
 
+  main .text p {
+    margin-block: 30px;
+  }
+
   main .text form {
     flex-direction: column;
   }
