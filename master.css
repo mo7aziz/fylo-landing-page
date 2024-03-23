@@ -100,10 +100,18 @@ select {
 
 a {
   text-decoration: none;
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-normal);
 }
 
 li {
   list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -306,9 +314,6 @@ article .text .link::before {
 }
 
 article .text .link a {
-  font-family: var(--ff-body);
-  font-size: var(--fs-body);
-  font-weight: var(--fw-normal);
   color: var(--clr-accent-2);
   margin-right: 5px;
 }
@@ -460,3 +465,61 @@ section form input[type='submit'] {
 }
 
 /* section */
+
+/* footer */
+
+footer {
+  background-color: var(--clr-primary-1);
+  padding-block: 50px;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+footer .container > img {
+  grid-column: 1/-1;
+}
+
+footer p,
+footer a,
+footer ion-icon{
+  color: var(--clr-neutral-1);
+}
+
+footer .info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+footer .info img {
+  margin-right: 10px;
+}
+
+footer li {
+  margin-bottom: 15px;
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .social a:not(:last-child) {
+  margin-right: 10px;
+}
+
+footer .social a:hover ion-icon,
+footer a:hover {
+  color: var(--clr-accent-1);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* footer */
