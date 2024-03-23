@@ -139,6 +139,32 @@ p {
   }
 }
 
+.image-text-layout .container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 30px;
+}
+
+.image-text-layout .text,
+.image-text-layout img {
+  flex: 1 1 0;
+  width: 0;
+}
+
+@media (max-width: 768px) {
+  main .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main .text,
+  main img {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* Header */
 header .container {
   display: flex;
@@ -167,20 +193,6 @@ header .links a:not(:last-child) {
 
 /* main */
 
-main .container {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 30px;
-}
-
-main .text,
-main img {
-  flex: 1 1 0;
-  width: 0;
-}
-
-
 main .text p {
   margin-block: 10px;
 }
@@ -190,6 +202,16 @@ main .text form {
   gap: 10px;
   font-family: var(--ff-body);
   font-size: var(--fs-body);
+}
+
+@media (max-width: 768px) {
+  main .text p {
+    margin-block: 30px;
+  }
+
+  main .text form {
+    flex-direction: column;
+  }
 }
 
 main .text form input[type='email'] {
@@ -222,33 +244,11 @@ main .text form input[type='submit']:focus{
   background-color: var(--clr-accent-1);
 }
 
-@media (max-width: 768px) {
-  main .container {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  main .text,
-  main img {
-    width: 100%;
-    text-align: center;
-  }
-
-  main .text p {
-    margin-block: 30px;
-  }
-
-  main .text form {
-    flex-direction: column;
-  }
-}
 
 /* main */
 
 /* article */
 
-article {
-  
-}
+
 
 /* article */
