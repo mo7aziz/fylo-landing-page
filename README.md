@@ -17,7 +17,7 @@ This is a solution to the [Fylo landing page with two column layout challenge on
 
 ## Links
 
-- Live Site URL: [Github Pages](https://mo7aziz.github.io/fylo-landing-page/)
+- Live Site URL: [https://mo7aziz.github.io/fylo-landing-page/](https://mo7aziz.github.io/fylo-landing-page/)
 
 ## Built with
 
